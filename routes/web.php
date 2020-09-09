@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return config('majalah.pagination');
+    return view('welcome');
+});
+
+Route::get('/user',function (){
+    return 'user';
 });
