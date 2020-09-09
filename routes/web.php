@@ -15,13 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// buat route
-Route::get('redirect',function(){
+// buat route resource 
+Route:: apiResource('artikel','ArtikelController');
 
-    return redirect()->route('homepage');
-
-});
-Route::get('homepage/landing',function(){
-    return 'landing';
-})->name('homepage');
 
