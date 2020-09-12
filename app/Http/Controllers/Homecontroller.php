@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 class Homecontroller extends Controller
 {
      // buat method
-     public function index(){
-        return 'Cuma testing doang';
+     public function index(request $request){
+    //    echo $_GET['name'];
+        // dd($request->name);
+
+        // echo $request->name;
+        // gunakan method get
+        echo $request->get('name','kosong');
     }
 }
