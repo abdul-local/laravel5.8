@@ -11,14 +11,7 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
-// buat route resource 
-// Route:: apiResource('artikel','ArtikelController');
-Route::view('/','welcome');
-Route::redirect('/disini','/disana');
-Route::get('/user','Homecontroller@index')->name('user');
-
+Route::get('/','Homecontroller@index')->name('home');
+Route::post('/','Homecontroller@store');
 
