@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // buat route resource 
-Route:: apiResource('artikel','ArtikelController');
+// Route:: apiResource('artikel','ArtikelController');
+Route::view('/','welcome');
+Route::redirect('/disini','/disana');
+Route::get('/user','Homecontroller@index')->name('user');
 
 
