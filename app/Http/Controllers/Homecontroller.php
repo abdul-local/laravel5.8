@@ -6,19 +6,22 @@ use Illuminate\Http\Request;
 
 class Homecontroller extends Controller
 {
- // buat method untuk index
- public function index(){
-     return '<form action="'.route('home').'" method="post">
-     <input type="text" name="email">
-     <button type="submit" >button </button> 
-     </form>';
- }
- // buat method untuk store utnuk ngamibl data dari methd index
- public function store(Request $request){
-     //
-     echo $request->email;
+// method
+public function index($username){
+    // return view('user.index')->with('name',$username);
+    // return view('user.index')->with([
+    //     'name'=>$username,
+    //     'fullname'=>'Abdulloh hamzan',
+    // ]);
+    //menggunakan concapact
+    // // dd(compact('username'));
+    // return view('user.index'.compact('username'));
 
- }
-
+    // cara yang paling baik
+    return view('user.index',[
+        'username'=>$username,
+        'fullname'=>'abdull hamzan',
+    ]);
+}
     
 }
