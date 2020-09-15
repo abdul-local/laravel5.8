@@ -10,7 +10,17 @@ class Homecontroller extends Controller
 // method
 public function index(){
     //return nilainya
-    return view('home');
+    // return view('home');
+    
+    // menggunakan response json
+    $data= [
+        'posts'=>[
+            ['id'=>1,'title'=>'ABC'],
+            ['id'=>2,'title'=>'ACC'],
+            ['id'=>3,'title'=>'ADD'],
+        ]
+        ];
+    return response()->json($data);
 }
 // buat method dengan nama other
 public function other(){
