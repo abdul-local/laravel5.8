@@ -4,23 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Newsletter\subscriptionform;
-
+use App\Mail\UserVerification;
+use Illuminate\Support\Facades\Mail;
 class Homecontroller extends Controller
 {
 // method
 public function index(){
-    //return nilainya
-    // return view('home');
     
-    // menggunakan response json
-    $data= [
-        'posts'=>[
-            ['id'=>1,'title'=>'ABC'],
-            ['id'=>2,'title'=>'ACC'],
-            ['id'=>3,'title'=>'ADD'],
-        ]
-        ];
-    return response()->json($data);
+    Mail::to('abdullah.hamzan@gmail.com')->send(new UserVerification());
+    return 'email berhasil di kirim';
 }
 // buat method dengan nama other
 public function other(){
