@@ -6,10 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{{ route('todostore') }}" method="POST">
+    <form action="{{ route('subscribe') }}" method="POST">
     @csrf
-    <input type="text" name='todo'>
-   <input type="submit" value="save">
+    <input type="text" name='email'>
+    @if ($errors->has('email'))
+    {{$errors->first()}}
+
+    @endif
+   <input type="submit" value="Subscribe">
     </form>
 </body>
 </html>

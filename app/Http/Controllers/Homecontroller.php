@@ -9,11 +9,14 @@ class Homecontroller extends Controller
 // method
 public function index(){
     //return nilainya
-    return view('todo');
+    return view('home');
 }
 
-public function store(Request $request){
-    dd($request->todo);
+public function subscribe(Request $request){
+    $this->validate($request,[
+        'email'=>'required|email',
+    ]);
+    dd($request->email);
 }
 
     

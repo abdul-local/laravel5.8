@@ -14,6 +14,6 @@
 
 Route::get('/','Homecontroller@index');
 
-Route::post('/todo','Homecontroller@store')->name('todostore');
+Route::post('/todo','Homecontroller@subscribe')->name('subscribe');
 
 
