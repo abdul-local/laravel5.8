@@ -16,6 +16,10 @@ public function subscribe(Request $request){
     $this->validate($request,[
         'email'=>'required|email',
     ]);
+    // ],[
+    //     'email.required'=>':attribute harus di isi',
+    //     'email.email'=>'kami membutuhkan email yang Valid',
+    // ]);
     dd($request->email);
 }
 
