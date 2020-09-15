@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\Newsletter\subscriptionform;
 
 class Homecontroller extends Controller
 {
@@ -12,16 +13,10 @@ public function index(){
     return view('home');
 }
 
-public function subscribe(Request $request){
-    $this->validate($request,[
-        'email'=>'required|email',
-    ]);
-    // ],[
-    //     'email.required'=>':attribute harus di isi',
-    //     'email.email'=>'kami membutuhkan email yang Valid',
-    // ]);
-    dd($request->email);
+public function subscribe(subscriptionform $request){
+    
+
+    dd('Berhasil langgana ');
 }
 
-    
 }
