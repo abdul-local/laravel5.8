@@ -10,8 +10,9 @@ class Homecontroller extends Controller
 // method
 public function index(){
     
-    Mail::to('abdullah.hamzan@gmail.com')->send(new userActivationMail());
-    return 'email berhasil di kirim';
+    // Mail::to('abdullah.hamzan@gmail.com')->send(new userActivationMail());
+    // return 
+    return new userActivationMail;
 }
 // buat method dengan nama other
 public function other(){
