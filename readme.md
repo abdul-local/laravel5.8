@@ -16,4 +16,10 @@ php artisan make:migration modifying_name_on_user --table=user
 perintah untuk merubah name pada colom
 php artisan make:migration rename_phone_on_user --table=user
 
+untu Managemn Database dengan Eloquent 
+
+printah yang bisa kita dunakan terlebih dahulu buat dulu membuat model dengan perintah
+php artisan make:Model Post
+setelah itu baru di model kita isi untuk fillable
+
 
