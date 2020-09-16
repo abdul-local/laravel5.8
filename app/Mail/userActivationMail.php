@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class UserVerification extends Mailable
+class userActivationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,6 @@ class UserVerification extends Mailable
      */
     public function build()
     {
-        return $this->view('Mail/Verification');
+        return $this->markdown('emails.activation');
     }
 }
