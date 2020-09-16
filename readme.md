@@ -10,4 +10,10 @@ menjalankan rolback kita bisa menggunakan perintah php artisan migrate:rolback
 ketika ingin menambahkan table kita dapat mengguakan
 php artisan make:migration add_phone_user_table --table=user
 
+perintah untuk modifikastion table dapat dengan gunakan
+php artisan make:migration modifying_name_on_user --table=user
+
+perintah untuk merubah name pada colom
+php artisan make:migration rename_phone_on_user --table=user
+
 
