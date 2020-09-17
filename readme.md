@@ -33,5 +33,19 @@ setelah itu baru di model kita isi untuk fillable
  # lalu bagiama cara mendelete data
  1. ya udah tinggal pakai method delete aja yang ada di larave nanti akan menghapus data sesui dengan nilai id nya bro
 
+ # Mencari data di data base dengan method where
+ 1. kita bisa mengguakan method where dengan paramater yang kita isi nama table dan nilainy
+ 2. contoh misalnya saya memiliki data di database dengan nama table post, di mana terdapat table yang namanya is_published yang
+ memiliki type data boolean.
+ 3. nah untuk mengambil datanya bisa menggunakan printah $post  = Post::where('is_published', true)->first(), atau bisa juga menggunakan method get()
+ # Mengurutkan data di database dengan method orderBy
+ 1. misalnya ketika kita ingin mengurutkan data di table post kita bisa melakukan perintah dengan method orderBy
+ 2. $post = Post::orderBy('id',asc)->get();
+
+ # Untuk Mengambil data terakhir di database bisa menggunakan method latest()
+ 1. gunakan printah $post = Post::latest()->get();
+
+ 
+
 
 
