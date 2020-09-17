@@ -22,4 +22,10 @@ printah yang bisa kita dunakan terlebih dahulu buat dulu membuat model dengan pe
 php artisan make:Model Post
 setelah itu baru di model kita isi untuk fillable
 
+# bagiaman cara membuat create data di database dengan Laravel
+ 1. lakukan di perintah php artisan make:migration create_posts_table
+ 2. Buat kan modelnya dengan perintah php artisan make:model posts
+ 3. setalah itu lakukan perintah di terminal dengan printah php artisan migrate
+ 
+
 

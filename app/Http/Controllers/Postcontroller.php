@@ -8,11 +8,17 @@ use App\Post;
 class Postcontroller extends Controller
 {
     //
-    public function index(Post $post){
-       $posts=$post->take(10)->get();
-    //    dd($posts);
-        return view('post/index',[
-            'posts'=>$posts,
-        ]);
+    public function index(){
+        // Post::create([
+        //     'title'=>'judul 1',
+        //     'content'=>'Content 1'
+        // ]);
+        $posts = new Post;
+        $posts->title='judul 2';
+        $posts->content='Kontent 2';
+        $posts->save();
+
+    
     }
+    
 }

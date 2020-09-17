@@ -11,22 +11,22 @@
 |
 */
 
-Route::get('/index','Postcontroller@index');
-Route::get('/','Homecontroller@index');
-// membuat Route baru
-Route::get('/lain','Homecontroller@other')->name('other');
+Route::get('/','Postcontroller@index');
+// Route::get('/','Homecontroller@index');
+// // membuat Route baru
+// Route::get('/lain','Homecontroller@other')->name('other');
 
-Route::post('/todo','Homecontroller@subscribe')->name('subscribe');
+// Route::post('/todo','Homecontroller@subscribe')->name('subscribe');
 
-Route::get('/seed',function(\App\Post $post){
-    $faker=Faker\Factory::create();
-    foreach (range(1,100) as $x){
-        $post->create([
-            'title'=>$faker->sentence(5),
-            'content'=>$faker->sentence(30),
-        ]);
-    }
+// Route::get('/seed',function(\App\Post $post){
+//     $faker=Faker\Factory::create();
+//     foreach (range(1,100) as $x){
+//         $post->create([
+//             'title'=>$faker->sentence(5),
+//             'content'=>$faker->sentence(30),
+//         ]);
+//     }
 
-});
+// });
 
 
