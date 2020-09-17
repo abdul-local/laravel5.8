@@ -12,12 +12,11 @@ class Homecontroller extends Controller
 // method
 public function index(){
     
-    $user = User::where('username','abdul')->first();
-    // dd($user);
-    // return $user->username;
-
-    // mengakses full name
-    return $user->usernameorname();
+    // $user = User::where('active',false)->get();
+    // $user =User::Active()->get();
+    $user = User::lebihdari(21)->get();
+     dd($user);
+   
 
   
 }

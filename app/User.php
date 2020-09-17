@@ -48,4 +48,14 @@ class User extends Authenticatable
         }
         return $this->username;
     }
+    // membuat scope untuk mempermudah di control
+    public function scopeActive($query){
+        return $query->where('active',true);
+    }
+
+    // membuat scope untuk mengambil data umur lebih 21
+    public function scopeLebihdari($query,$age){
+        return $query->where('age','>=',$age);
+    }
+
 }

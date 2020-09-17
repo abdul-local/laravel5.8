@@ -49,7 +49,14 @@ setelah itu baru di model kita isi untuk fillable
  1. method carbon diffForHumans() berfungsi untuk menampilkan waktu
  2. untuk varibel yang belum support dengan carbon dapat diinisia di model sehingga bisa support carbon
 
- 
+ # Untuk mempermudah dalam proses pengambilan data dari database maka kita gunaka fiture scope
+ 1.penulisannya harus di awali dengan kata scope kemudian di ikuti huru kapital
+ 2. sebagai contoh membuat scope untuk data yang memiliki nilai ative saja di database
+ 3. public function scopeActive($query){
+     return $query->where('active',true)->get();
+ }
+
+
 
 
  
