@@ -26,6 +26,11 @@ setelah itu baru di model kita isi untuk fillable
  1. lakukan di perintah php artisan make:migration create_posts_table
  2. Buat kan modelnya dengan perintah php artisan make:model posts
  3. setalah itu lakukan perintah di terminal dengan printah php artisan migrate
+
+ # Bagiaman cara Update datanya.. 
+ 1. ushakan rubah dulu di routnya di mana kita lewatkan berdasarkan nilai Id
+ 2. setelah itu di controll nya kita gunakan method update lalu isikan field yang baru
  
+
 
 
