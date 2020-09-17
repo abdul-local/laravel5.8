@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','email',
     ];
 
     /**
@@ -36,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //buat method
+    public function getFullname(){
+        return $this->first_name . ' ' .$this->last_name;
+    }
+    // buat method usernameorname
+    public function usernameorname(){
+        if(!$this->username){
+            return $this->table->first_name;
+        }
+        return $this->username;
+    }
 }

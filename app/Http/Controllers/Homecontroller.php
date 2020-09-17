@@ -5,25 +5,20 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Newsletter\subscriptionform;
 use App\Mail\userActivationMail;
 use Illuminate\Support\Facades\Mail;
+use App\User;
 class Homecontroller extends Controller
+
 {
 // method
 public function index(){
     
-    // Mail::to('abdullah.hamzan@gmail.com')->send(new userActivationMail());
-    // return 
-    return new userActivationMail;
-}
-// buat method dengan nama other
-public function other(){
-    return 'Other direct nih broo';
-}
+    $user = User::where('username','abdul')->first();
+    // dd($user);
+    // return $user->username;
 
-public function subscribe(subscriptionform $request){
-    
+    // mengakses full name
+    return $user->usernameorname();
 
-    // menggunaka cara lain
-    return redirect()->route('other');
+  
 }
-
 }
