@@ -11,7 +11,7 @@
 |
 */
 
-
+Route::get('/index','Postcontroller@index');
 Route::get('/','Homecontroller@index');
 // membuat Route baru
 Route::get('/lain','Homecontroller@other')->name('other');
