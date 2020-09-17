@@ -11,5 +11,11 @@ class Post extends Model
         'title',
         'content',
     ];
+
+    // inisiasi untuk mendaptarkan variabel published_at biar bisa terkoneksi karbon
+    protected $dates =[
+        'published_at'
+    ];
+
 }
 

@@ -45,6 +45,13 @@ setelah itu baru di model kita isi untuk fillable
  # Untuk Mengambil data terakhir di database bisa menggunakan method latest()
  1. gunakan printah $post = Post::latest()->get();
 
+ # Untuk Bekerja dengan Waktu bisa menggunakan carbon dan method nya
+ 1. method carbon diffForHumans() berfungsi untuk menampilkan waktu
+ 2. untuk varibel yang belum support dengan carbon dapat diinisia di model sehingga bisa support carbon
+
+ 
+
+
  
 
 
