@@ -9,12 +9,8 @@ class Postcontroller extends Controller
 {
     //
     public function index(Request $request){
-        $post=Post::find($request->id);
-        $post->update([
-            'title'=>'Post satu',
-            'content'=>'Kontent satu',
-        ]);
-    
+        $post=Post::findorfail($request->id);
+        $post->delete();
     
     }
     

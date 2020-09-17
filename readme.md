@@ -30,7 +30,8 @@ setelah itu baru di model kita isi untuk fillable
  # Bagiaman cara Update datanya.. 
  1. ushakan rubah dulu di routnya di mana kita lewatkan berdasarkan nilai Id
  2. setelah itu di controll nya kita gunakan method update lalu isikan field yang baru
- 
+ # lalu bagiama cara mendelete data
+ 1. ya udah tinggal pakai method delete aja yang ada di larave nanti akan menghapus data sesui dengan nilai id nya bro
 
 
 
