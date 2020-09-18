@@ -60,6 +60,13 @@ setelah itu baru di model kita isi untuk fillable
  1. di laravel sudah di sediakan method paginate();
  2. contoh misalnya kita memiliki data 100 da kita mau nampilkan data denga urutan data mulai dari yang post terbaru sampai yang yang terlama dengan jumlah data yang di muculkan sebanyak 2 data saja.
  3. $user = User::latest()->paginate(2);
+ 4. untuk pagination dengan ururtan sesui dengan asc dan per-page yang di igikan =1 dapat kita gunakan perintah di view nya  {{ $users->appends(['per-page'=>Request::get('per-page'),
+                        'order'=>Request::get('asc'),
+   ])->render() }}
+
+# untuk mempersingkat dapat menggunaka  helper request dan method only untuk mempersingat render data pada pagination
+ {{$users->appends(request()->only('per-page','order'))->render()}}
+
 
 
 

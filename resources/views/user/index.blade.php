@@ -12,7 +12,7 @@
     <h1>{{$user->username }}</h1>
 
     @endforeach
-   {{ $users->render() }}
+    {{$users->appends(request()->only('per-page','order'))->render()}}
     @endif
 </body>
 </html>
