@@ -57,5 +57,8 @@ class User extends Authenticatable
     public function scopeLebihdari($query,$age){
         return $query->where('age','>=',$age);
     }
+    // public function getRouteKeyname(){
+    //     return 'username';
+    // }
 
 }

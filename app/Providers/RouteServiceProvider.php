@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Providers;
+use App\User;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -26,6 +27,12 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+        Route::bind('users',function($username){
+           return  User::where('username',$username)
+           ->where('active',true)
+           ->first();
+        });
     }
 
     /**
