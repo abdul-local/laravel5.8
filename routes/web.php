@@ -10,25 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/{id}','Postcontroller@index');
-
- Route::get('/','Homecontroller@index');
- Route::get('/user/{users}','Homecontroller@show');
-// // membuat Route baru
-// Route::get('/lain','Homecontroller@other')->name('other');
-
-// Route::post('/todo','Homecontroller@subscribe')->name('subscribe');
-
-// Route::get('/seed',function(\App\Post $post){
-//     $faker=Faker\Factory::create();
-//     foreach (range(1,100) as $x){
-//         $post->create([
-//             'title'=>$faker->sentence(5),
-//             'content'=>$faker->sentence(30),
-//         ]);
-//     }
-
-// });
+Route::get('/', function () {
+    return view('auth/register');
+});
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
