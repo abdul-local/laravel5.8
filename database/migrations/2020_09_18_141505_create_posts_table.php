@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddPhoneUserTable extends Migration
-{
+
+class CreatePostsTable extends Migration
+{   
+    
     /**
      * Run the migrations.
      *
@@ -13,9 +15,11 @@ class AddPhoneUserTable extends Migration
      */
     public function up()
     {
-        Schema::table('user', function (Blueprint $table) {
-            //
-            $table->string('phone',15)->after('address');
+        Schema::create('posts', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('title',50);
+            $table->text('content');
+            $table->timestamps();
         });
     }
 
@@ -26,9 +30,6 @@ class AddPhoneUserTable extends Migration
      */
     public function down()
     {
-        Schema::table('user', function (Blueprint $table) {
-            //
-            $table->dropColumn('phone');
-        });
+        Schema::dropIfExists('posts');
     }
 }

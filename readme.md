@@ -67,6 +67,9 @@ setelah itu baru di model kita isi untuk fillable
 # untuk mempersingkat dapat menggunaka  helper request dan method only untuk mempersingat render data pada pagination
  {{$users->appends(request()->only('per-page','order'))->render()}}
 
+# Dasar-dasar Seeder 
+1. kita dapat menjalankan perintah dengan membuat seeder yaitu php artisan make:seeder PostTableSeeder
+2. seder berfungsi untuk mempermudah par developer utuk mengelola database;
 
 
 
