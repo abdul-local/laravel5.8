@@ -56,6 +56,13 @@ setelah itu baru di model kita isi untuk fillable
      return $query->where('active',true)->get();
  }
 
+ # Bagiamana sih cara buat pagination di laravel
+ 1. di laravel sudah di sediakan method paginate();
+ 2. contoh misalnya kita memiliki data 100 da kita mau nampilkan data denga urutan data mulai dari yang post terbaru sampai yang yang terlama dengan jumlah data yang di muculkan sebanyak 2 data saja.
+ 3. $user = User::latest()->paginate(2);
+
+
+
 
 
 

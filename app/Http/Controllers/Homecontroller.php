@@ -10,20 +10,15 @@ class Homecontroller extends Controller
 
 {
 // method
-public function index(){
+public function index(Request $request){
+    $user =User::latest()->paginate($request->get('per-page',2));
+    return view('user/index',[
+        'users'=>$user,
+    ]);
     
-    // $user = User::where('active',false)->get();
-    // $user =User::Active()->get();
-
-    $user = User::lebihdari(21)->get();
-     dd($user);  
   }
 
-// method tu find id
-// public function show($id){
-//     $user=User::find($id);
-//     dd($user);
-// }
+
 public function show(User $users){
     dd($users);
 }
