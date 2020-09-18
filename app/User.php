@@ -44,7 +44,7 @@ class User extends Authenticatable
     // buat method usernameorname
     public function usernameorname(){
         if(!$this->username){
-            return $this->table->first_name;
+            // return $this->table->first_name;
         }
         return $this->username;
     }

@@ -72,6 +72,9 @@ setelah itu baru di model kita isi untuk fillable
 2. seder berfungsi untuk mempermudah par developer utuk mengelola database;
 
 
+# untuk mempermudah daalam penulisan secara acak kita bisa memanfaatka seeder factory
+1. kita bisa Membuat factory dengan printah php artisan make:factory PostFactory 
+2.
 
 
 
